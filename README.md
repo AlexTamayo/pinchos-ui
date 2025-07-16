@@ -1,6 +1,6 @@
 # Pinchos UI
 
-A modern React component library built with TypeScript and styled-components, focusing on flexibility and reusability.
+A modern React component library built with TypeScript and styled-components, focusing on flexibility and reusability. The key feature is prop-based styling, eliminating the need for separate CSS files.
 
 ## 🚧 Development Status
 
@@ -8,9 +8,9 @@ This library is currently in active development and not yet ready for production
 
 ## Features
 
-- 🎨 Styled-components for dynamic and maintainable styling
+- 🎨 Prop-based styling system - no CSS files needed
 - 📱 Responsive design support out of the box
-- 🔧 Highly customizable components
+- 🔧 Highly customizable components through props
 - 💪 Written in TypeScript for better development experience
 - ⚛️ Modern React patterns and best practices
 
@@ -41,19 +41,54 @@ This library requires the following peer dependencies:
 }
 ```
 
-## Basic Usage
+## Usage Examples
+
+### Basic Div Component
+
+The `Div` component accepts styling props for layout and appearance:
 
 ```tsx
-import { Button, Div, Form } from 'pinchos-ui';
+import { Div } from 'pinchos-ui';
 
 function MyComponent() {
   return (
-    <Div>
-      <Button>Click Me</Button>
+    <Div
+      display="flex"
+      flexDirection="column"
+      padding="20px"
+      background="#f5f5f5"
+      borderRadius="8px"
+    >
+      Content goes here
     </Div>
   );
 }
 ```
+
+### Button Component
+
+The `Button` component combines interactive states with prop-based styling:
+
+```tsx
+import { Button } from 'pinchos-ui';
+
+function MyComponent() {
+  return (
+    <Button
+      padding="12px 24px"
+      background="#007bff"
+      color="white"
+      hoverBackground="#0056b3"
+      activeScale={0.98}
+      onClick={() => console.log('Clicked!')}
+    >
+      Click Me
+    </Button>
+  );
+}
+```
+
+These examples demonstrate how you can style components entirely through props, eliminating the need for separate CSS files or styled-components definitions.
 
 ## Development
 
