@@ -1,0 +1,33 @@
+# Source
+src/
+tests/
+examples/
+docs/
+
+# Config files
+.eslintrc*
+.prettierrc*
+.editorconfig
+.gitignore
+.npmignore
+tsup.config.ts
+jest.config.*
+tsconfig.json
+*.tsbuildinfo
+
+# Development
+coverage/
+.nyc_output/
+.github/
+.vscode/
+.idea/
+
+# Misc
+.DS_Store
+*.log
+.env*
+.cache/
+
+# Keep dist
+!dist/
+!dist/**/* 
